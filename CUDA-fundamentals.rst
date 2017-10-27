@@ -249,7 +249,7 @@ Reference
 
 [1]. NVIDIA Fermi Compute Architecture Whitepaper.
 
-[2]. CUDA C Programming Guid.
+[2]. CUDA C Programming Guide.
 
 
 .. Links
