@@ -11,4 +11,4 @@ password: g0pj
 .. Links
 
 .. _`documents`: http://pan.baidu.com/s/1o7HbejC
-.. _`Fundamentals of NVIDIA GPU & CUDA`: <CUDA-fundamentals.rst>
+.. _`Fundamentals of NVIDIA GPU & CUDA`: CUDA-fundamentals.rst
