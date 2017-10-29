@@ -6,7 +6,7 @@ For more `documents`_ from NVIDIA.
 password: g0pj
 
 `Fundamentals of NVIDIA GPU & CUDA`_
-------------------------------------------------------------
+------------------------------------
 
 .. Links
 
