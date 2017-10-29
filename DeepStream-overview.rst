@@ -43,7 +43,7 @@ Key Features
 
 
 Workflow
---------
+========
 
 .. figure:: images/DeepStream1.png
     :scale: 42 %
