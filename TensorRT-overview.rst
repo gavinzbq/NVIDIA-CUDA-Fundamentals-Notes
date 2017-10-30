@@ -1,6 +1,6 @@
-===========================
-NVIDIA TensorFlow Overview
-===========================
+=========================
+NVIDIA TensorRT Overview
+=========================
 
 :Author: Shanyun Gao
 
