@@ -65,8 +65,8 @@ Fourth Answer (finally...)
     :alt: image
 
 
-CUDA Programming Model Basics
-=============================
+CUDA Programming Model
+======================
 
 Term : CUDA
     CUDA stands for *Compute Unified Device Architecture*. It is a technology developed by NVIDIA that accelerates GPU computation processes. With CUDA, we can send C, C++ and Fortran code directly to the GPU without using assembly code, which lets us take advantage of **parallel computing** in which thousands of tasks / threads can be executed simultaneously.
@@ -103,6 +103,21 @@ Sequence of Operations for CUDA C Program
     
     5. Transfer results from the device to the host.
     
+    
+Kernels
+-------
+
+CUDA C extends C by allowing the protrammer to define C functions, called *kernels*.
+
+.. Important::
+    When kernels are called, they are executed N times in parallel by N different *CUDA threads*, as opposed to only once like regular C functions.
+    
+Thread Index
+------------
+
+Thread index is a 3-component vector, so that threads can be identified using a one-dimensional, two-dimensional or three-dimensional *thread index*, forming a one-dimensional, two-dimensional or three-dimensional block of threads called a *thread block*.
+
+
 CUDA Hierarchy of Threads, Blocks etc
 =====================================
 
