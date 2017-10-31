@@ -64,6 +64,16 @@ Fourth Answer (finally...)
     :scale: 42 %
     :alt: image
 
+Conclusion
+----------
+
+A few possible directions worth exploring: 
+
+    - multiple CUDA contexts
+    - NVIDIA **Multi-Process Server (MPS)**
+    - CUDA conceps like **contexts** and **streams**
+
+
 
 CUDA Programming Model
 ======================
@@ -112,11 +122,45 @@ CUDA C extends C by allowing the protrammer to define C functions, called *kerne
 .. Important::
     When kernels are called, they are executed N times in parallel by N different *CUDA threads*, as opposed to only once like regular C functions.
     
+Thread Hierarchy
+----------------
+
 Thread Index
-------------
+~~~~~~~~~~~~
 
 Thread index is a 3-component vector, so that threads can be identified using a one-dimensional, two-dimensional or three-dimensional *thread index*, forming a one-dimensional, two-dimensional or three-dimensional block of threads called a *thread block*.
 
+Thread Block
+~~~~~~~~~~~~
+
+**There are several things to note:**
+
+1. There is a limit to the number of threads per block, since all threads of a block are to reside on the same processor core and must share the limited memory resources of that core.
+
+2. A kernel can be executed by multiple equally-shaped thread blocks, so that the total number of threads is equal to the number of threads per block times the number of blocks.
+
+Grid
+~~~~
+
+Blocks are organized into 1-D, 2-D or 3-D *grid* of thread blocks as illustrated below.
+
+.. figure:: images/ThreadBlock1.png
+    :scale: 42 %
+    :alt: image
+
+Thread blocks are required to execute **independently**: it must be possible to execute them in any order, in parallel or in series. This independence requirement enables programmers to write code that scales with the number of cores.
+
+.. figure:: images/ThreadBlock2.png
+    :scale: 42 %
+    :alt: image
+
+
+Memory Hierarchy
+----------------
+
+.. figure:: images/MemoryHierarchy1.png
+    :scale: 42 %
+    :alt: image
 
 CUDA Hierarchy of Threads, Blocks etc
 =====================================
